@@ -1,0 +1,38 @@
+/* EMAIL SIGNUP FORM */
+#email-signup {
+    place-items: center;
+    /* margin: 0 auto; */
+    margin-top: 2em;
+    margin-bottom: 5em;
+    padding: 2em 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#email-signup > form {
+    grid-template-columns: 2;
+    grid-template-rows: 5;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 1em 5em;
+    margin-bottom: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: hsl(var(--color-red));
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: hsla(var(--color-red), 0.5);
+}
