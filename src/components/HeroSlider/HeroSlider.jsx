@@ -16,8 +16,8 @@ function HeroSlider() {
                     <a href="#slide-2"></a>
                     <a href="#slide-3"></a></div>
                 </div>
-                <button className="prev-button" onClick={() => handleClick('prev')}>&#10094;</button>
-                <button className="next-button" onClick={() => handleClick('next')}>&#10095;</button>
+                <button className="prev-button" onClick={1}>&#10094;</button>
+                <button className="next-button" onClick={1}>&#10095;</button>
         </section>
     );
 }

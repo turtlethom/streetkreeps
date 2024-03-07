@@ -55,10 +55,14 @@ div.menu-wrapper {
 .navigation li.cta {
     padding: .6em 1em; /* Adjust padding for the button */
     border-radius: 0.3em; /* Add border radius for rounded corners */
-    color: hsl(var(--color-white)); /* Set text color */
+    background-color: hsl(var(--color-red)); /* Set text color */
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+    transition: background-color 0.5s, color 0.3s; /* Add transition effect */
     align-self: center;
+}
+
+.navigation li.cta:hover {
+    background-color: white;
 }
 
 /* Target both <a> and <Link> elements */
@@ -123,7 +127,7 @@ div.menu-wrapper {
 
     #menu-icon {
         display: block;
-        transition: all 0.5s;
+        transition: all 0.6s;
     }
 
     #menu-icon:hover {
@@ -135,12 +139,10 @@ div.menu-wrapper {
         flex-direction: column;
         place-items: center;
         border: 1px solid white;
-    }
-    .navigation > * {
-        align-self: center;
+        padding-top: 3rem;
     }
     .navigation li {
-        padding: 0;
+        padding-block: 0.5rem;
     }
     .navigation li:not(:last-child) {
         margin-bottom: 0.5em; /* Adjust margin-bottom for smaller gap between elements */
