@@ -225,22 +225,32 @@ body {
   .ff-playfair { font-family: var(--ff-sans-playfair);}
 
   /* --------------------------------------------------------------- */
-  /* Navigation Media Query */
-  @media (max-width: 1024px) {
 
-    .navigation {
-      --gap: 4ch
-    }
-    .navigation li {
-        margin-bottom: 1em; /* Add spacing between items */
-    }
+::-webkit-scrollbar {
+  width: 1em;
+  height: 1em;
+}
 
-    .navigation li a,
-    .navigation li Link {
-        font-size: var(--fs-400); /* Adjust font size as needed */
-    }
+::-webkit-scrollbar-track {
+  background: hsla(var(--color-white), 0.4);
+  border-radius: 100vw;
+  margin-block: .5em;
+  transition: background 1.0s ease-in-out;
+}
 
-    .logo-icon {
-      max-width: 18em;
-    }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(hsl(var(--color-red)), hsl(var(--color-black)));
+  border-radius: 100vw;
+  border: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: pink;
+}
+
+@supports (-webkit-scrollbar-thumb: hsl(var(--color-red))) {
+  * {
+    scrollbar-color: hsl(var(--color-red)) hsl(var(--color-black));
+    scrollbar-width: thin;
+  }
 }
