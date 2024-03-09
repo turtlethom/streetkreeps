@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <>
             <HeroSlider/>
-            <div className="container">
+            <div>
                 {/* <ImageSlider/> */}
                 <EmailSignup/>
             </div>
