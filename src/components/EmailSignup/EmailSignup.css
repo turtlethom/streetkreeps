@@ -3,7 +3,7 @@
     grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    padding: 2em;
+    padding: 2rem;
     border: 1px solid red;
 }
 
@@ -14,6 +14,7 @@
 
 .email-form-heading > * {
     border: 1px solid white;
+    padding: 1rem;
 }
 
 .terms-group {
@@ -30,6 +31,7 @@
     text-align: center;
     width: minmax(10rem, 80%);
     gap: 2rem;
+    margin-block: 2rem;
 }
 
 .field-group input {
@@ -69,7 +71,19 @@
 .field-group input:valid,
 .field-group input:focus {
     border: 1px solid hsla(var(--color-red), 0.75);
-} 
+}
+
+.terms-group {
+    margin-inline: auto;
+    gap: 2rem;
+}
+
+.email-signup > button[type="submit"] {
+    color: hsl(var(--color-white));
+    border: 1px solid black;
+    inline-size: 80%;
+    margin-inline: auto;
+}
 /*
 Email Form Requirements:
 -> Title: Signup To Our Newsletter

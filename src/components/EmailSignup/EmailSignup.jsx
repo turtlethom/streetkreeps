@@ -13,7 +13,7 @@ export default function EmailSignup() {
   return (
     <form className="email-signup fs-500 bg-black" onSubmit={handleSubmit(onSubmit)}>
       <div className="email-form-heading">
-        <h2 className="fs-800">Signup To Our Newsletter</h2>
+        <h2 className="fs-800">Signup To Our Newsletter!</h2>
         <p>Stay Up To Date On Promotions, Updates, Events, & More!</p>
       </div>
 
@@ -43,10 +43,12 @@ export default function EmailSignup() {
           type="checkbox" 
           id="agreeTerms"
         />
-        <label htmlFor="agreeTerms">I agree to receive emails from StreetKreeps and accept all terms and conditions.</label>
+        <span>
+          I agree to receive emails from StreetKreeps and accept all terms and conditions
+        </span>
       </div>
 
-      <button type="submit">Sign Me Up</button>
+      <button className="bg-red" type="submit">Sign Me Up</button>
     </form>
   );
 }
