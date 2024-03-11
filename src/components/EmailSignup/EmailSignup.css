@@ -1,38 +1,83 @@
-/* EMAIL SIGNUP FORM */
-#email-signup {
-    place-items: center;
-    /* margin: 0 auto; */
-    margin-top: 2em;
-    margin-bottom: 5em;
-    padding: 2em 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.email-signup {
+    display: grid;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 2em;
+    border: 1px solid red;
 }
 
-#email-signup > form {
-    grid-template-columns: 2;
-    grid-template-rows: 5;
-}
-
-input[type="email"] {
-    width: 100%;
-    padding: 1em 5em;
-    margin-bottom: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.email-form-heading {
+    grid-column: span 2;
     text-align: center;
 }
 
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: hsl(var(--color-red));
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.email-form-heading > * {
+    border: 1px solid white;
 }
 
-button[type="submit"]:hover {
-    background-color: hsla(var(--color-red), 0.5);
+.terms-group {
+    grid-column: 1 / span 2; /* Span both columns */
 }
+
+.email-signup > button[type="submit"] {
+    grid-column: span 2;
+}
+
+.field-group {
+    display: flex;
+    position: relative;
+    text-align: center;
+    width: minmax(10rem, 80%);
+    gap: 2rem;
+}
+
+.field-group input {
+    inline-size: 100%;
+    color: white;
+    padding: 1em;
+    border: 1px solid hsla(var(--color-white), 0.25);
+    border-radius: 4px;
+    outline: none;
+    font-size: var(--fs-400);
+    background-color: var(--color-grey);
+    transition: 0.5s;
+}
+
+.field-group > span {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    font-size: 0.8em;
+    padding: 1rem;
+    color: hsla(var(--color-white), 0.25);
+    transition: 0.5s;
+}
+
+.field-group input:valid ~ span,
+.field-group input:focus ~ span {
+    color: hsl(var(--color-red));
+    transform: translateX(10px) translateY(-12px);
+    font-size: var(--fs-300);
+    padding-block: 1px;
+    background-color: hsl(var(--color-black));
+    border-left: 1px solid hsla(var(--color-red), 0.25);
+    border-right: 1px solid hsla(var(--color-red), 0.25);
+    letter-spacing: 0.2em;
+}
+
+.field-group input:valid,
+.field-group input:focus {
+    border: 1px solid hsla(var(--color-red), 0.75);
+} 
+/*
+Email Form Requirements:
+-> Title: Signup To Our Newsletter
+-> SubHeading: Stay Up To Date On Promotions, Updates, Events, & More!
+-> Label #1 (Optional): Full Name (Left)
+-> Field #1: Full Name (Right)
+-> Label #2 (Required): Email Address 
+-> Field #2: Email Address (Right)
+-> Option #1: I agree to receive emails from StreetKreeps and accept all terms and conditions.
+-> Button Sign Me Up
+*/

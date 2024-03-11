@@ -1,58 +1,52 @@
-import React, { useState } from "react";
-import './EmailSignup.css';
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import './EmailSignup.css'; // Import CSS file
 
-function EmailSignup() {
-    const [email, setEmail] = useState('');
+export default function EmailSignup() {
+  const { register, handleSubmit, formState: {errors} } = useForm();
+  const [data, setData] = useState("");
+ 
+  const onSubmit = (data) => {
+    setData(data)
+  }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            // Send form data to the backend using fetch
-            const response = await fetch('/submission', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email }),
-            });
+  return (
+    <form className="email-signup fs-500 bg-black" onSubmit={handleSubmit(onSubmit)}>
+      <div className="email-form-heading">
+        <h2 className="fs-800">Signup To Our Newsletter</h2>
+        <p>Stay Up To Date On Promotions, Updates, Events, & More!</p>
+      </div>
 
-            if (response.ok) {
-                alert('Signup successful!');
-            } else {
-                throw new Error('Failed to sign up');
-            }
-        } catch (error) {
-            console.error('Error signing up:', error);
-            alert('An error occurred while signing up. Please try again later.');
-        }
-    };
+          <div className="field-group">
+            <input
+              {...register("fullName")}
+              type="text" 
+              id="fullName"
+              required
+            />
+            <span>Full Name</span>
+          </div>
+          <div className="field-group">
+            <input
+              {...register("email", { required: true })}
+              type="email"
+              id="email"
+              required
+            />
+            <span>Email</span>
+          </div>
 
-    const handleChange = (e) => {
-        setEmail(e.target.value);
-    };
+            {/* {errors.email && <span className="error">Email address is required</span>} */}
+      <div className="terms-group">
+        <input 
+          {...register("agreeTerms")} 
+          type="checkbox" 
+          id="agreeTerms"
+        />
+        <label htmlFor="agreeTerms">I agree to receive emails from StreetKreeps and accept all terms and conditions.</label>
+      </div>
 
-    return (
-        <section>
-            <div id="email-signup" className="grid container">
-                <h2 className="fs-700 letter-spacing-2">Subscribe To StreetKreeps</h2>
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor="email">Email:</label>
-                    <input 
-                        className="letter-spacing-2" 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder="Enter Email Address" 
-                        value={email}
-                        onChange={handleChange}
-                        required 
-                    />
-                    <button className="letter-spacing-2" type="submit">Signup</button>
-                </form>
-                <p>Receive Updates About Upcoming Events, Latest News, Promotions & More!</p>
-            </div>
-        </section>
-    );
+      <button type="submit">Sign Me Up</button>
+    </form>
+  );
 }
-
-export default EmailSignup;

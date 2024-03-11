@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import "./HeroSlider.css";
 
 function HeroSlider() {
@@ -72,8 +72,10 @@ function HeroSlider() {
                     ))}
                 </div>
             </div>
+
             <button type="button" className="prev-button" onClick={handlePrevButtonClick}>&#10094;</button>
             <button type="button" className="next-button" onClick={handleNextButtonClick}>&#10095;</button>
+            
         </section>
     );
 }

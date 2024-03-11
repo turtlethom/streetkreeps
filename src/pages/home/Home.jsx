@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <>
             <HeroSlider/>
-            <div>
+            <div style={{inlineSize: '70%', marginInline: 'auto'}}>
                 {/* <ImageSlider/> */}
                 <EmailSignup/>
             </div>
