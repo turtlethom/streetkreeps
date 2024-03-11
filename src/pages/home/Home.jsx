@@ -7,7 +7,6 @@ export default function Home() {
         <>
             <HeroSlider/>
             <div style={{inlineSize: '70%', marginInline: 'auto'}}>
-                {/* <ImageSlider/> */}
                 <EmailSignup/>
             </div>
             <Socials/>
