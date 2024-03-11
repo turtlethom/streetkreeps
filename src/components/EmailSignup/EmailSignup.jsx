@@ -13,11 +13,11 @@ export default function EmailSignup() {
 
   return (
     <>
-      <form className="email-signup fs-500 bg-grey" onSubmit={handleSubmit(onSubmit)}>
+      <form className="email-signup fs-500 bg-grey" onSubmit={handleSubmit(onSubmit)} style={{marginInline: '2em'}}>
       <div className="email-form-heading">
         <p> Join The StreetKreeps Family </p>
         <h2> Stay Updated </h2>
-        <p>~ Stay Up To Date On Promotions, Updates, Events, & More! ~</p>
+        <p>~ Receive The Latest News On Promotions, Updates, Events, & More! ~</p>
       </div>
             <div className="field-group">
               <input

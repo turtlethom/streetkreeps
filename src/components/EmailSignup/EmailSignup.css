@@ -1,17 +1,19 @@
 .email-signup {
     display: grid;
-    margin-inline: 3rem;
     margin-block: 3rem;
-    grid-template-rows: 3fr repeat(3, 1fr);
+    grid-template-rows: 2fr repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
+    min-height: 470px;
     align-items: center;
     border: 5px solid black;
+    box-shadow: 0 0 1em hsla(var(--color-red), 0.25);
 }
 
 .email-form-heading {
     grid-column: span 2;
+    padding: 1rem;
     text-align: center;
-    margin-inline: 1rem;
+    
 }
 
 .email-form-heading > h2 {
@@ -36,17 +38,18 @@
     position: relative;
     text-align: center;
     width: minmax(10rem, 80%);
-    margin: 1.0rem;
+    margin: 1rem;
 }
 
 .field-group input {
-    inline-size: calc(100% - 2em);
+    inline-size: 100%;
+    block-size: 100%;
     color: white;
     padding: 1em;
     border: 1px solid hsla(var(--color-white), 0.25);
     border-radius: 4px;
     outline: none;
-    font-size: var(--fs-400);
+    font-size: clamp(0.5rem, 3vw, var(--fs-400));
     background-color: var(--color-grey);
     transition: 0.5s;
 }
@@ -66,7 +69,7 @@
 .field-group input:focus ~ span {
     color: hsl(var(--color-red));
     transform: translateX(10px) translateY(-12px);
-    font-size: var(--fs-300);
+    font-size: min(var(--fs-200), var(--fs-400));
     padding-block: 1px;
     background-color: hsl(var(--color-grey));
     border-left: 1px solid hsla(var(--color-red), 0.25);
@@ -96,29 +99,13 @@
     margin-inline: auto;
 }
 
-/* @media (max-width: 1046px) {
-
+@media (max-width: 1046px) {
     .email-signup {
-        grid-template-rows: 2fr repeat(3, 1fr);
+        
     }
-    .email-form-heading > h2{
-        font-size: var(--fs-700);
-    }
+    
 
-    .email-form-heading > :not(h2) {
-        font-size: var(--fs-450);
-    }
-
-    .field-group, .field-group > *, .terms-group {
-        font-size: var(--fs-400);
-    }
-
-    .field-group input:valid ~ span,
-    .field-group input:focus ~ span {
-        font-size: var(--fs-200);
-    }
-
-} */
+}
 /*
 Email Form Requirements:
 -> Title: Signup To Our Newsletter
