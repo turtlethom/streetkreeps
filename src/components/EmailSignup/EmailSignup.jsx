@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import InputField from "../InputField/InputField";
 import './EmailSignup.css'; // Import CSS file
 
 export default function EmailSignup() {
@@ -19,25 +20,9 @@ export default function EmailSignup() {
         <h2> Stay Updated </h2>
         <p>~ Receive The Latest News On Promotions, Updates, Events, & More! ~</p>
       </div>
-            <div id="name-input" className="field-group">
-              <input
-                {...register("fullName")}
-                type="text"
-                id="fullName"
-                required
-              />
-              <span>Full Name</span>
-            </div>
-            <div id="email-input" className="field-group">
-              <input
-                {...register("email", { required: true })}
-                type="email"
-                id="email"
-                required
-              />
-              <span>Email</span>
-            </div>
-              {/* {errors.email && <span className="error">Email address is required</span>} */}
+        <InputField type="text" fieldName="fullName" id="fullName" registerFunc={register}/>
+        <InputField type="email" fieldName="email" id="email" registerFunc={register}/>
+            {/* {errors.email && <span className="error">Email address is required</span>} */}
         <div className="terms-group">
           <input
             {...register("agreeTerms")}
@@ -48,7 +33,7 @@ export default function EmailSignup() {
             I agree to receive emails from StreetKreeps and accept all terms and conditions
           </span>
         </div>
-        <button className="bg-red" type="submit">Sign Me Up</button>
+        <button className="subscribe-button" type="submit">Subscribe</button>
         {/* Display the submitted form data */}
         {data && <p>Submitted: {JSON.stringify(data)}</p>}
       </form>

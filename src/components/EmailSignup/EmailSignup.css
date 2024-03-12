@@ -16,8 +16,11 @@
 }
 
 .email-form-heading > h2 {
-    letter-spacing: 0.6rem;
-    font-size: clamp(2rem, 7vw + 1rem, 6rem);
+    letter-spacing: 0.4rem;
+    line-height: 1.2;
+    font-size: clamp(1rem, 7vw + 1rem, 6rem);
+    padding-inline: 1rem;
+    border-radius: 1rem;
     background-color: hsl(var(--color-red), 0.5);
 }
 
@@ -31,54 +34,6 @@
 
 .email-signup > button[type="submit"] {
     grid-column: span 2;
-}
-
-.field-group {
-    position: relative;
-    text-align: center;
-    width: 90%;
-    margin-inline: auto;
-}
-
-.field-group input {
-    inline-size: 100%;
-    block-size: 100%;
-    padding: 1em;
-    border: 1px solid hsla(var(--color-white), 0.25);
-    border-radius: 4px;
-    outline: none;
-    font-size: clamp(0.5rem, 6vw, var(--fs-500));
-    color: white;
-    background-color: var(--color-grey);
-    transition: 0.5s;
-}
-
-.field-group > span {
-    position: absolute;
-    left: 0;
-    pointer-events: none;
-    font-size: clamp(0.5rem, 6vw, var(--fs-500));
-    padding: 1rem;
-    color: hsla(var(--color-white), 0.25);
-    transition: 0.5s;
-}
-
-/* Field Style When User Focuses On A REQUIRED FIELD */
-.field-group input:valid ~ span,
-.field-group input:focus ~ span {
-    color: hsl(var(--color-red));
-    transform: translateX(10px) translateY(-12px);
-    font-size: min(var(--fs-200), var(--fs-400));
-    padding-block: 1px;
-    background-color: hsl(var(--color-grey));
-    border-left: 1px solid hsla(var(--color-red), 0.25);
-    border-right: 1px solid hsla(var(--color-red), 0.25);
-    letter-spacing: 0.3em;
-}
-
-.field-group input:valid,
-.field-group input:focus {
-    border: 1px solid hsla(var(--color-red), 0.75);
 }
 
 .terms-group {
@@ -98,13 +53,15 @@
     margin-inline: auto;
 }
 
-@media (max-width: 1046px) {
-    .email-signup {
-        
-    }
+.submit-button {
+    background: var(--color-grad);
+}
+
+/* @media (max-width: 1046px) {
+    
     
 
-}
+} */
 /*
 Email Form Requirements:
 -> Title: Signup To Our Newsletter

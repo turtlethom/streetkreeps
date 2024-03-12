@@ -1,11 +1,11 @@
 import React from "react";
 import './InputField.css';
 
-const InputField = function(type, fieldName, id) {
+const InputField = function({type, fieldName, id, registerFunc}) {
     return (
         <div className="field-group">
               <input
-                {...register(fieldName)}
+                {...registerFunc(fieldName)}
                 type={type}
                 id={id}
                 required
