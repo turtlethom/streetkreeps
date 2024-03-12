@@ -19,7 +19,7 @@ export default function EmailSignup() {
         <h2> Stay Updated </h2>
         <p>~ Receive The Latest News On Promotions, Updates, Events, & More! ~</p>
       </div>
-            <div className="field-group">
+            <div id="name-input" className="field-group">
               <input
                 {...register("fullName")}
                 type="text"
@@ -28,7 +28,7 @@ export default function EmailSignup() {
               />
               <span>Full Name</span>
             </div>
-            <div className="field-group">
+            <div id="email-input" className="field-group">
               <input
                 {...register("email", { required: true })}
                 type="email"

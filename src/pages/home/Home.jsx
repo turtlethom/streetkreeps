@@ -6,9 +6,9 @@ export default function Home() {
     return (
         <>
             <HeroSlider/>
-            <div style={{inlineSize: '70%', marginInline: 'auto'}}>
+            {/* <div style={{inlineSize: '70%', marginInline: 'auto'}}> */}
                 <EmailSignup/>
-            </div>
+            {/* </div> */}
             <Socials/>
         </>
     )

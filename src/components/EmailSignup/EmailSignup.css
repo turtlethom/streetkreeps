@@ -3,7 +3,6 @@
     margin-block: 3rem;
     grid-template-rows: 2fr repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    min-height: 470px;
     align-items: center;
     border: 5px solid black;
     box-shadow: 0 0 1em hsla(var(--color-red), 0.25);
@@ -18,7 +17,8 @@
 
 .email-form-heading > h2 {
     letter-spacing: 0.6rem;
-    font-size: clamp(2rem, 5vw + 1rem, 6rem);
+    font-size: clamp(2rem, 7vw + 1rem, 6rem);
+    background-color: hsl(var(--color-red), 0.5);
 }
 
 .email-form-heading > p {
@@ -34,22 +34,21 @@
 }
 
 .field-group {
-    display: flex;
     position: relative;
     text-align: center;
-    width: minmax(10rem, 80%);
-    margin: 1rem;
+    width: 90%;
+    margin-inline: auto;
 }
 
 .field-group input {
     inline-size: 100%;
     block-size: 100%;
-    color: white;
     padding: 1em;
     border: 1px solid hsla(var(--color-white), 0.25);
     border-radius: 4px;
     outline: none;
-    font-size: clamp(0.5rem, 3vw, var(--fs-400));
+    font-size: clamp(0.5rem, 6vw, var(--fs-500));
+    color: white;
     background-color: var(--color-grey);
     transition: 0.5s;
 }
@@ -58,7 +57,7 @@
     position: absolute;
     left: 0;
     pointer-events: none;
-    font-size: 0.8em;
+    font-size: clamp(0.5rem, 6vw, var(--fs-500));
     padding: 1rem;
     color: hsla(var(--color-white), 0.25);
     transition: 0.5s;
