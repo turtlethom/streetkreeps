@@ -14,14 +14,29 @@ export default function EmailSignup() {
 
   return (
     <>
-      <form className="email-signup fs-500 bg-grey" onSubmit={handleSubmit(onSubmit)} style={{marginInline: '2em'}}>
-      <div className="email-form-heading">
-        <p> Join The StreetKreeps Family </p>
-        <h2> Stay Updated </h2>
-        <p>~ Receive The Latest News On Promotions, Updates, Events, & More! ~</p>
-      </div>
-        <InputField type="text" fieldName="fullName" id="fullName" registerFunc={register}/>
-        <InputField type="email" fieldName="email" id="email" registerFunc={register}/>
+      <form 
+        className="email-signup" 
+        onSubmit={handleSubmit(onSubmit)} 
+        style={{marginInline: '2em'}}
+      >
+        <div className="email-form-heading">
+          <p>Join The StreetKreeps Family</p>
+          <h2>Stay Updated</h2>
+          <p>~ Receive The Latest News On Promotions, Updates, Events, & More! ~</p>
+        </div>
+
+        <InputField 
+          type="text" 
+          fieldName="fullName" 
+          id="fullName" 
+          registerFunc={register}
+        />
+        <InputField 
+          type="email" 
+          fieldName="email" 
+          id="email" 
+          registerFunc={register}
+        />
             {/* {errors.email && <span className="error">Email address is required</span>} */}
         <div className="terms-group">
           <input
@@ -33,7 +48,8 @@ export default function EmailSignup() {
             I agree to receive emails from StreetKreeps and accept all terms and conditions
           </span>
         </div>
-        <button className="subscribe-button" type="submit">Subscribe</button>
+        <button className="subscribe-btn" type="submit">Subscribe</button>
+
         {/* Display the submitted form data */}
         {data && <p>Submitted: {JSON.stringify(data)}</p>}
       </form>

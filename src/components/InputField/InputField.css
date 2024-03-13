@@ -1,45 +1,52 @@
 .field-group {
     display: flex;
     position: relative;
-    text-align: center;
     width: minmax(10rem, 80%);
     margin: 1rem;
+    text-align: center;
 }
 
 .field-group input {
     inline-size: 100%;
+    padding: 1rem;
     block-size: 100%;
-    padding: 1em;
+
     border: 1px solid hsla(var(--color-white), 0.25);
     border-radius: 4px;
     outline: none;
-    font-size: clamp(0.5rem, 3vw, var(--fs-400));
+
+    font-size: clamp(0.5em, 3vw, var(--fs-400));
     color: white;
     background-color: var(--color-grey);
+
     transition: 0.5s;
 }
 
 .field-group > span {
     position: absolute;
-    left: 0;
-    pointer-events: none;
-    font-size: 0.8em;
-    padding: 1rem;
+    left: 5px;
+    padding: 0.5rem;
+    
+    font-size: clamp(0.8em, 1.7vw, 1.6em);
     color: hsla(var(--color-white), 0.25);
+    pointer-events: none;
+
     transition: 0.5s;
 }
 
 /* Field Style When User Focuses On A REQUIRED FIELD */
 .field-group input:valid ~ span,
 .field-group input:focus ~ span {
-    color: hsl(var(--color-red));
-    transform: translateX(10px) translateY(-12px);
-    font-size: min(var(--fs-200), var(--fs-400));
     padding-block: 1px;
-    background-color: hsl(var(--color-grey));
     border-left: 1px solid hsla(var(--color-red), 0.25);
     border-right: 1px solid hsla(var(--color-red), 0.25);
     letter-spacing: 0.3em;
+
+    color: hsl(var(--color-red));
+    font-size: min(var(--fs-200), var(--fs-400));
+    background-color: hsl(var(--color-grey));
+
+    transform: translateX(10px) translateY(-12px);
 }
 
 .field-group input:valid,

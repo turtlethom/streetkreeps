@@ -9,6 +9,7 @@
 - react-dom ^18.2.0
 - react ^18.2.0
 - react-router-dom ^6.22.1
+- react-hook-form: ^7.51.0
 - @remixicons/react ^4.20
 
 ---

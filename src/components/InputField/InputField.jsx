@@ -1,7 +1,7 @@
 import React from "react";
 import './InputField.css';
 
-const InputField = function({type, fieldName, id, registerFunc}) {
+const InputField = function({ type, fieldName, id, registerFunc }) {
     return (
         <div className="field-group">
               <input

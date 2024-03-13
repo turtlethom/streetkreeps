@@ -5,6 +5,7 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     border: 5px solid black;
+    background: var(--color-grey);
     box-shadow: 0 0 1em hsla(var(--color-red), 0.25);
 }
 
@@ -12,7 +13,6 @@
     grid-column: span 2;
     padding: 1rem;
     text-align: center;
-    
 }
 
 .email-form-heading > h2 {
@@ -53,8 +53,8 @@
     margin-inline: auto;
 }
 
-.submit-button {
-    background: var(--color-grad);
+.subscribe-btn {
+    background: hsl(var(--color-red));
 }
 
 /* @media (max-width: 1046px) {

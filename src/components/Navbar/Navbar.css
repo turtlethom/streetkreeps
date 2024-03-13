@@ -1,13 +1,10 @@
 
-/* Navigation */
-
 .show-nav {
     top: 14.1em;
     opacity: 1;
 }
 
 .hide-nav {
-    /* display: none; */
     top: -100%;
     opacity: 0;
     pointer-events: none;
@@ -19,8 +16,8 @@
 }
 
 .logo-wrapper img {
-    width: 35rem;
-    margin: 1rem;
+    inline-size: min(40rem, 50%);
+    margin-block: 1rem;
     z-index: 1002;
 }
 
