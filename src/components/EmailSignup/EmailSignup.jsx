@@ -17,7 +17,7 @@ export default function EmailSignup() {
       <form 
         className="email-signup" 
         onSubmit={handleSubmit(onSubmit)} 
-        style={{marginInline: '2em'}}
+        
       >
         <div className="email-form-heading">
           <p>Join The StreetKreeps Family</p>

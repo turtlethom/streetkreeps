@@ -1,6 +1,8 @@
 .slider-container {
     padding: 0rem;
     position: relative;
+    inline-size: 90%;
+    margin-inline: auto;
 }
 
 .slider-wrapper {
@@ -12,7 +14,7 @@
 .slider {
     display: flex;
     aspect-ratio: 16 / 9;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     border-radius: 0.5rem;
 }
@@ -20,6 +22,7 @@
 .slider img {
     flex: 1 0 100%; /*Flex grow, flex shrink, flex basis*/
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     object-fit: cover;
 }
 

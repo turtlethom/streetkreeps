@@ -5,7 +5,8 @@
     --color-white: 0, 0%, 96%;
     --color-black: 0, 0%, 0%;
 
-    --color-grad: linear-gradient(90deg, rgba(89,89,89,1) 0%, rgba(0,0,0,1) 53%, rgba(255,0,0,1) 100%);
+    --color-grad-red: 179deg,  rgba(0,0,0,1) 9.2%, rgba(127,16,16,1) 103.9%;
+    --color-grad-dark: to right, rgb(0, 0, 0), rgb(67, 67, 67);
   
     /* font-sizes */
     --fs-900: 9.375rem;
@@ -35,7 +36,7 @@ body {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.125rem;
     color: hsl(var(--color-white));
-    background-color: hsl(var(--color-grey));
+    background: linear-gradient(var(--color-grad-dark));
     line-height: 1.5;   /* Default = 1.4, but too small. Alt: 1.6 */
     min-height: 100vh; /* Prevent Short Page Issue */
 }

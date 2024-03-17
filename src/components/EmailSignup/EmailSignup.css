@@ -1,17 +1,21 @@
 .email-signup {
     display: grid;
-    margin-block: 3rem;
+    inline-size: 90%;
+    margin-inline: auto;
+    margin-block: 3em;
     grid-template-rows: 2fr repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     border: 5px solid black;
-    background: var(--color-grey);
+    background: var(--color-grad-dark);
     box-shadow: 0 0 1em hsla(var(--color-red), 0.25);
 }
 
 .email-form-heading {
     grid-column: span 2;
-    padding: 1rem;
+    width: 80%;
+    justify-self: center;
+    padding-block: 1rem;
     text-align: center;
 }
 
@@ -19,7 +23,6 @@
     letter-spacing: 0.4rem;
     line-height: 1.2;
     font-size: clamp(1rem, 7vw + 1rem, 6rem);
-    padding-inline: 1rem;
     border-radius: 1rem;
     background-color: hsl(var(--color-red), 0.5);
 }

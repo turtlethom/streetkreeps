@@ -30,11 +30,11 @@ function NavBar() {
 
     return (
         <header>
-            <div className="flex logo-wrapper bg-black">
+            <div className="flex logo-wrapper">
                 <img src="streetkreeps(2).png" alt="" />
             </div>
 
-            <div id="nav-wrapper" className="bg-black">
+            <div id="nav-wrapper" className="">
                 <nav>
 
                     <div className="flex menu-wrapper container" onClick={toggleMenu}>
