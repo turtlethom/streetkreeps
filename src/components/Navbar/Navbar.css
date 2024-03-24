@@ -13,6 +13,7 @@
 .logo-wrapper {
     position: relative;
     justify-content: center;
+    background-color: hsl(var(--color-black));
 }
 
 .logo-wrapper img {
@@ -23,7 +24,8 @@
 
 div.menu-wrapper {
     position: relative;
-    margin: auto;
+    margin-inline: auto;
+    margin-block: 0 0.5rem;
     justify-content: center;
     z-index: 2;
 }
@@ -31,7 +33,6 @@ div.menu-wrapper {
 #menu-icon {
     display: none;
     border: 1px solid white;
-    padding: .5em;
     border-radius: 0.5em;
     width: 80%;
 }
@@ -128,7 +129,7 @@ div.menu-wrapper {
     }
 
     #menu-icon:hover {
-        background-color: hsla(var(--color-red), 1);
+        background-color: hsla(var(--color-red), 0.5);
     }
 
     .navigation {

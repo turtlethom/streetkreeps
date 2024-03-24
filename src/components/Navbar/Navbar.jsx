@@ -38,7 +38,7 @@ function NavBar() {
                 <nav>
 
                     <div className="flex menu-wrapper container" onClick={toggleMenu}>
-                        <RiMenuLine id="menu-icon" size={50} color="white"/>
+                        <RiMenuLine id="menu-icon" size={60} color="white"/>
                     </div>
 
                     <div className={`dropdown bg-black ${navigationOpen ? "show-nav" : "hide-nav"}`}>
