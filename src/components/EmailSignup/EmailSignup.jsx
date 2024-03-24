@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import InputField from "../InputField/InputField";
-import './EmailSignup.css'; // Import CSS file
+// import './EmailSignup.css'; // Import CSS file
+import styles from './EmailSignup.module.css'
 
 export default function EmailSignup() {
   const { register, handleSubmit, formState: {errors} } = useForm();
@@ -15,11 +16,11 @@ export default function EmailSignup() {
   return (
     <>
       <form 
-        className="email-signup" 
+        className={styles.emailSignup} 
         onSubmit={handleSubmit(onSubmit)} 
         
       >
-        <div className="email-form-heading">
+        <div className={styles.emailFormHeading}>
           <p>Join The StreetKreeps Family</p>
           <h2>Stay Updated</h2>
           <p>~ Receive The Latest News On Promotions, Updates, Events, & More! ~</p>
@@ -38,7 +39,7 @@ export default function EmailSignup() {
           registerFunc={register}
         />
             {/* {errors.email && <span className="error">Email address is required</span>} */}
-        <div className="terms-group">
+        <div className={styles.termsGroup}>
           <input
             {...register("agreeTerms")}
             type="checkbox"
@@ -48,7 +49,7 @@ export default function EmailSignup() {
             I agree to receive emails from StreetKreeps and accept all terms and conditions
           </span>
         </div>
-        <button className="subscribe-btn" type="submit">Subscribe</button>
+        <button type="submit">Subscribe</button>
 
         {/* Display the submitted form data */}
         {data && <p>Submitted: {JSON.stringify(data)}</p>}

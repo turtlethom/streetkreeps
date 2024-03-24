@@ -1,4 +1,4 @@
-.email-signup {
+.emailSignup {
     display: grid;
     inline-size: 90%;
     margin-inline: auto;
@@ -11,7 +11,7 @@
     box-shadow: 0 0 1em hsla(var(--color-red), 0.25);
 }
 
-.email-form-heading {
+.emailFormHeading {
     grid-column: span 2;
     width: 80%;
     justify-self: center;
@@ -19,7 +19,7 @@
     text-align: center;
 }
 
-.email-form-heading > h2 {
+.emailFormHeading > h2 {
     letter-spacing: 0.4rem;
     line-height: 1.2;
     font-size: clamp(1rem, 7vw + 1rem, 6rem);
@@ -27,37 +27,37 @@
     background-color: hsl(var(--color-red), 0.5);
 }
 
-.email-form-heading > p {
+.emailFormHeading > p {
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
-.terms-group {
+.termsGroup {
     grid-column: 1 / span 2; /* Span both columns */
 }
 
-.email-signup > button[type="submit"] {
+.emailSignup > button[type="submit"] {
     grid-column: span 2;
 }
 
-.terms-group {
+.termsGroup {
     margin-inline: auto;
     gap: 2rem;
 }
 
-.terms-group > span {
+.termsGroup > span {
     font-size: clamp(1rem, 2vw, 1.5rem);
     margin-inline: 1rem;
 }
 
-.email-signup > button[type="submit"] {
+.emailSignup > button[type="submit"] {
     color: hsl(var(--color-white));
+    background-color: hsl(var(--color-red), 1);
+    
     border: 1px solid black;
-    inline-size: 60%;
     margin-inline: auto;
-}
-
-.subscribe-btn {
-    background: hsl(var(--color-red));
+    border-radius: 5px;
+    inline-size: 50%;
+    block-size: 50%;
 }
 
 /* @media (max-width: 1046px) {
