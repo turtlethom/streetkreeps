@@ -1,7 +1,8 @@
 import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { RiMenuLine } from "@remixicon/react";
-import "./Navbar.css"
+// import "./Navbar.css";
+import styles from "./Navbar.module.css";
 
 function NavBar() {
 
@@ -30,29 +31,24 @@ function NavBar() {
 
     return (
         <header>
-            <div className="flex logo-wrapper">
+            <div className={styles.logoWrapper}>
                 <img src="streetkreeps(2).png" alt="" />
             </div>
+            <nav>
+                <div className={styles.menuWrapper} onClick={toggleMenu}>
+                    <RiMenuLine id={styles.menuIcon} size={60} color="white"/>
+                </div>
 
-            <div id="nav-wrapper" className="">
-                <nav>
-
-                    <div className="flex menu-wrapper container" onClick={toggleMenu}>
-                        <RiMenuLine id="menu-icon" size={60} color="white"/>
-                    </div>
-
-                    <div className={`dropdown bg-black ${navigationOpen ? "show-nav" : "hide-nav"}`}>
-                        <ul className={`flex navigation letter-spacing-2 text-white`} >
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/events">Events</Link></li>
-                            <li><Link to="/about">About</Link></li>
-                            <li><Link to="/contact">Contact</Link></li>
-                            <li className="cta"><Link to="/register">Register</Link></li>
-                        </ul>
-                    </div>
-
-                </nav>
-            </div>
+                <div className={`${styles.dropdown} bg-black ${navigationOpen ? styles.showNav : styles.hideNav}`}>
+                    <ul className={`flex ${styles.navigation} letter-spacing-2 text-white`} >
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/events">Events</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li className={styles.cta}><Link to="/register">Register</Link></li>
+                    </ul>
+                </div>
+            </nav>
         </header>
     )
 }

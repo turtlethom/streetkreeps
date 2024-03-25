@@ -1,28 +1,29 @@
-
-.show-nav {
+.showNav {
     top: 14.1em;
     opacity: 1;
 }
 
-.hide-nav {
+.hideNav {
     top: -100%;
     opacity: 0;
     pointer-events: none;
     transition: top 0.3s ease, opacity 0.5s ease;
 }
-.logo-wrapper {
+.logoWrapper {
+    display: flex;
     position: relative;
     justify-content: center;
     background-color: hsl(var(--color-black));
 }
 
-.logo-wrapper img {
+.logoWrapper img {
     inline-size: min(40rem, 50%);
     margin-block: 1rem;
     z-index: 1002;
 }
 
-div.menu-wrapper {
+div.menuWrapper {
+    display: flex;
     position: relative;
     margin-inline: auto;
     margin-block: 0 0.5rem;
@@ -30,7 +31,7 @@ div.menu-wrapper {
     z-index: 2;
 }
 
-#menu-icon {
+#menuIcon {
     display: none;
     border: 1px solid white;
     border-radius: 0.5em;
@@ -118,17 +119,17 @@ div.menu-wrapper {
         margin-inline: 0;
     }
 
-    .menu-wrapper, .logo-wrapper, #menu-icon {
+    .menuWrapper, .logoWrapper, #menuIcon {
         position: relative;
         z-index: 2;
     }
 
-    #menu-icon {
+    #menuIcon {
         display: block;
         transition: all 0.6s;
     }
 
-    #menu-icon:hover {
+    #menuIcon:hover {
         background-color: hsla(var(--color-red), 0.5);
     }
 
