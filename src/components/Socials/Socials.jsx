@@ -1,15 +1,16 @@
 import React from "react";
 import { RiFacebookCircleFill, RiSnapchatFill, RiInstagramFill } from "@remixicon/react";
-import './Socials.css'
+import styles from './Socials.module.css';
 
 function Socials() {
+    const socialSize = '3em'
     return (
-        <div id="socials-section" className="bg-black">
-            <h1>Follow Us On Social Media!</h1>
-            <div className="flex social-icons">
-                <a href="#/facebook"><RiFacebookCircleFill size={'2em'}/></a>
-                <a href="#/snapchat"><RiSnapchatFill size={'2em'}/></a>
-                <a href="#/discord"><RiInstagramFill size={'2em'}/></a>
+        <div className="bg-black">
+            <h1 className="fs-700">Follow Us On Social Media!</h1>
+            <div className={`flex ${styles.socialIcons}`}>
+                <a href="#/facebook"><RiFacebookCircleFill size={socialSize}/></a>
+                <a href="#/snapchat"><RiSnapchatFill size={socialSize}/></a>
+                <a href="#/discord"><RiInstagramFill size={socialSize}/></a>
             </div>
         </div>
     );

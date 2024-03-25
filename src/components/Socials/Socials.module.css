@@ -1,0 +1,10 @@
+h1 {
+    text-align: center;
+    margin-block: 1rem;
+    padding: 1rem;
+}
+
+.socialIcons {
+    justify-content: space-around;
+    padding: 1em;
+}
