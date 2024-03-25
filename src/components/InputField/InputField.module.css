@@ -1,4 +1,4 @@
-.field-group {
+.fieldGroup {
     display: flex;
     position: relative;
     width: minmax(10rem, 80%);
@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-.field-group input {
+.fieldGroup input {
     inline-size: 90%;
     padding: 1rem;
     block-size: 100%;
@@ -23,7 +23,7 @@
     transition: 0.5s;
 }
 
-.field-group > span {
+.fieldGroup > span {
     position: absolute;
     left: 5px;
     padding: 0.5rem;
@@ -36,8 +36,8 @@
 }
 
 /* Field Style When User Focuses On A REQUIRED FIELD */
-.field-group input:valid ~ span,
-.field-group input:focus ~ span {
+.fieldGroup input:valid ~ span,
+.fieldGroup input:focus ~ span {
     padding-block: 1px;
     border-left: 1px solid hsla(var(--color-red), 0.25);
     border-right: 1px solid hsla(var(--color-red), 0.25);
@@ -50,7 +50,7 @@
     transform: translateX(10px) translateY(-12px);
 }
 
-.field-group input:valid,
-.field-group input:focus {
+.fieldGroup input:valid,
+.fieldGroup input:focus {
     border: 1px solid hsla(var(--color-red), 0.75);
 }

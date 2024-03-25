@@ -1,9 +1,10 @@
 import React from "react";
-import './InputField.css';
+// import './InputField.css';
+import styles from "./InputField.module.css";
 
 const InputField = function({ type, fieldName, id, registerFunc }) {
     return (
-        <div className="field-group">
+        <div className={styles.fieldGroup}>
               <input
                 {...registerFunc(fieldName)}
                 type={type}
