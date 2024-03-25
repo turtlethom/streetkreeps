@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
-import "./HeroSlider.css";
+// import "./HeroSlider.css";
+import styles from "./HeroSlider.module.css";
 
 function HeroSlider() {
     const sliderRef = useRef(null);
@@ -49,32 +50,32 @@ function HeroSlider() {
     }
 
     return (
-        <section className="slider-container">
-            <div className="slider-wrapper" ref={sliderRef}>
-                <div className="slider">
+        <section className={styles.sliderContainer}>
+            <div className={styles.sliderWrapper} ref={sliderRef}>
+                <div className={styles.slider}>
                     {SLIDE_DETAILS.map((slide, index) => (
                         <img
                             key={slide.id}
                             id={slide.id}
                             src={slide.src}
                             alt={slide.alt}
-                            className={index === currentSlide ? "active" : ""}
+                            className={index === currentSlide ? styles.active : ""}
                         />
                     ))}
                 </div>
-                <div className="slider-nav">
+                <div className={styles.sliderNav}>
                     {SLIDE_DETAILS.map((_, index) => (
                         <button 
                             key={index} 
                             onClick={() => handleNavClick(index)}
-                            className={index === currentSlide ? "active" : ""}
+                            className={index === currentSlide ? styles.active : ""}
                         ></button>
                     ))}
                 </div>
             </div>
 
-            <button type="button" className="prev-button" onClick={handlePrevButtonClick}>&#10094;</button>
-            <button type="button" className="next-button" onClick={handleNextButtonClick}>&#10095;</button>
+            <button type="button" className={styles.prevButton} onClick={handlePrevButtonClick}>&#10094;</button>
+            <button type="button" className={styles.nextButton} onClick={handleNextButtonClick}>&#10095;</button>
             
         </section>
     );
