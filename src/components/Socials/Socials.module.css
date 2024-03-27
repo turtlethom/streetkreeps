@@ -8,3 +8,24 @@ h1 {
     justify-content: space-around;
     padding: 1em;
 }
+
+.socialIcons > a {
+    background-color: hsl(var(--color-black));
+    border: 1px dashed white;
+    border-radius: 5em;
+    padding: 1em;
+    transition: background-color 0.8s, transform 0.8s;
+}
+
+.socialIcons > a:hover {
+    background-color: hsl(var(--color-red));
+    transform: translateY(-10%);
+}
+
+/* Select the SVG elements inside the icons */
+.RiFacebookCircleFill svg,
+.RiSnapchatFill svg,
+.RiInstagramFill svg {
+    /* Add styles here */
+    transition: fill 0.8s, transform 0.8s; /* Example transition */
+}
