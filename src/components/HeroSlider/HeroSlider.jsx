@@ -6,6 +6,7 @@ function HeroSlider() {
     const sliderRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0); // Current slide index
 
+    // **** ADD SLIDES IN THIS SECTION ****
     const SLIDE_DETAILS = [
         {
             id: "slide-1",
@@ -21,7 +22,12 @@ function HeroSlider() {
             id: "slide-3",
             src: "hero-slide3.jpg",
             alt: "Third Image Slide"
-        }
+        },
+        {
+            id: "slide-4",
+            src: "StreetKreeps-Group.jpg",
+            alt: "Fourth Image Slide"
+        },
     ];
 
     const scrollToSlide = (slideIndex) => {

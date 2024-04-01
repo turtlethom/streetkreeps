@@ -33,6 +33,8 @@
 
 .termsGroup {
     grid-column: 1 / span 2; /* Span both columns */
+    text-align: center;
+    padding-inline: 2em;
 }
 
 .emailSignup > button[type="submit"] {

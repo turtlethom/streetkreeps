@@ -145,6 +145,44 @@ body {
     padding-inline: auto;
     width: 90%;
   }
+
+  /* Spikes Container Styles 
+- Use https://yqnn.github.io/svg-path-editor/ for SVG creation
+- Created the 'triangle.svg' in 'assets' folder
+*/
+.spikes {
+  --spikes-color: hsl(var(--color-black));
+  --spike-width: 50px;
+  --spike-height: 10px;
+
+  position: relative;
+  color: black;
+  background: linear-gradient(
+      to right,
+      #fdc830,
+      #f37335
+  );
+}
+
+.spikes::before,
+.spikes::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: var(--spike-height);
+  background: var(--spikes-color);
+  mask-image: url('assets/triangle.svg');
+  mask-size: var(--spike-width) var(--spike-height);
+}
+
+.spikes::before {
+  top: 0;
+}
+
+.spikes::after {
+  bottom: 0;
+  transform: rotate(.5turn);
+}
   
   /* colors */
   .bg-red { background-color: hsl(var(--color-red));}
