@@ -3,3 +3,13 @@
   margin: 0;
   padding: 0;
 }
+
+.test-container {
+  display: grid;
+  place-content: center;
+}
+
+.test {
+  padding: 1rem;
+  font-size: var(--fs-500);
+}
