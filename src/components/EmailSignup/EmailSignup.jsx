@@ -1,16 +1,38 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import InputField from "../InputField/InputField";
-// import './EmailSignup.css'; // Import CSS file
-import styles from './EmailSignup.module.css'
+import SUPABASE from "../../config/supabaseClient";
+import styles from './EmailSignup.module.css';
 
 export default function EmailSignup() {
-  const { register, handleSubmit, formState: {errors} } = useForm();
-  const [data, setData] = useState("");
+  const { register, handleSubmit, formState: {errors}, reset } = useForm();
+  const [ submitting, setSubmitting ] = useState(false);
  
-  const onSubmit = (data) => {
-    // const formData = new FormData();
-    setData(data);
+  const onSubmit = async (formData) => {
+    try {
+      const { data, error } = await SUPABASE.from("emails").insert([
+          {
+            email: formData.email,
+            name: formData.fullName,
+            created_at: new Date().toISOString()
+          }
+      ]);
+
+      if (error) {
+        console.log(error);
+        throw error;
+      }
+      else {
+        console.log("Data inserted sucessfully: ", data);
+        reset();
+      }
+    }
+    catch (error) {
+      console.error("Error inserting data: ", error.message);
+    }
+    finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -49,10 +71,10 @@ export default function EmailSignup() {
             I agree to receive emails from StreetKreeps and accept all terms and conditions
           </span>
         </div>
-        <button type="submit">Subscribe</button>
+        <button type="submit" disabled={submitting}>Subscribe</button>
 
         {/* Display the submitted form data */}
-        {data && <p>Submitted: {JSON.stringify(data)}</p>}
+        {errors && (<p className={styles.error}>Error: {errors.message}</p>)}
       </form>
   </>
   );
