@@ -29,9 +29,9 @@
 /* Slider Buttons On Bottom */
 .sliderNav {
     display: flex;
-    column-gap: 5rem;
+    column-gap: clamp(1rem, 4vw, 5rem);
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;

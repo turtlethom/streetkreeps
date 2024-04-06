@@ -10,22 +10,22 @@ function HeroSlider() {
     const SLIDE_DETAILS = [
         {
             id: "slide-1",
-            src: "hero-slide1.jpg",
+            src: "streetkreeps-main.jpg",
             alt: "First Image Slide"
         },
         {
             id: "slide-2",
-            src: "hero-slide4.jpg",
+            src: "mustang-solo.jpg",
             alt: "Second Image Slide"
         },
         {
             id: "slide-3",
-            src: "hero-slide3.jpg",
+            src: "bike-solo.jpg",
             alt: "Third Image Slide"
         },
         {
             id: "slide-4",
-            src: "StreetKreeps-Group.jpg",
+            src: "two-cars.jpg",
             alt: "Fourth Image Slide"
         },
     ];
