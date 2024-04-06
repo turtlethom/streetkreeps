@@ -8,7 +8,7 @@ export default function Home() {
     // console.log(SUPABASE);
     return (
         <>
-            <TestButton/>
+            {/* <TestButton/> */}
             <HeroSlider/>
             <EmailSignup/>
             <Socials/>
