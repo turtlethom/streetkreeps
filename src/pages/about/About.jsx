@@ -1,3 +1,10 @@
+import React from "react";
+import StoryBlock from "../../components/TextBlocks/StoryBlock/StoryBlock";
+
 export default function About() {
-    return <div><h1>WELCOME TO ABOUT PAGE</h1></div>
+    return (
+        <div>
+            <StoryBlock/>
+        </div>
+    );
 }
