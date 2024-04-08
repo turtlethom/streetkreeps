@@ -48,18 +48,22 @@ export default function EmailSignup() {
           <p>~ Receive The Latest News On Promotions, Updates, Events, & More! ~</p>
         </div>
 
-        <InputField 
-          type="text" 
-          fieldName="fullName" 
-          id="fullName" 
-          registerFunc={register}
-        />
-        <InputField 
-          type="email" 
-          fieldName="email" 
-          id="email" 
-          registerFunc={register}
-        />
+        <div className={styles.field}>
+          <InputField
+            type="text"
+            fieldName="fullName"
+            id="fullName"
+            registerFunc={register}
+          />
+        </div>
+        <div className={styles.field}>
+          <InputField
+            type="email"
+            fieldName="email"
+            id="email"
+            registerFunc={register}
+          />
+        </div>
             {/* {errors.email && <span className="error">Email address is required</span>} */}
         <div className={styles.termsGroup}>
           <input
