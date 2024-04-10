@@ -1,0 +1,29 @@
+.contactContainer {
+    display: grid;
+    place-content: center;
+    margin-inline: auto;
+    background: hsl(var(--color-black), 0.5);
+    inline-size: 80%;
+    padding: 2rem;
+}
+
+.contactContainer > h1 {
+    font-size: clamp(5ch, 3.5vw + 3rem, 6rem);
+    font-weight: 550;
+}
+
+.contactContainer > h1,
+.subtitle,
+.lastParagraphs {
+    text-align: center;
+}
+
+.contactInfo {
+    inline-size: 100%;
+    list-style-type: disc;
+    padding: 1rem;
+}
+
+p > strong {
+    inline-size: 2rem;
+}
