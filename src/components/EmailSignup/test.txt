@@ -1,8 +1,0 @@
-
-const { data, error } = await supabase
-  .from('emails')
-  .insert([
-    { email: 'someValue', created_at: 'otherValue', name: 'anotherValue' },
-  ])
-  .select()
-          
