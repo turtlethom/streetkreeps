@@ -4,12 +4,14 @@
     
     line-height: 1.5;
     padding: 2rem;
-    border: 1px solid black;
 }
 
 .paragraphContainer > h1 {
-    font-size: clamp(1rem, 5vw + 1rem, 6rem);
+    font-size: clamp(5ch, 3.5vw + 1.5rem, 6rem);
     font-weight: 550;
+    border: 1px solid hsl(var(--color-black), 0.8);
+    background-color: hsl(var(--color-red), 0.5);
+    border-radius: 10px;
 }
 
 .paragraphContainer > h2 {

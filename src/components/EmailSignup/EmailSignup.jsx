@@ -78,7 +78,7 @@ export default function EmailSignup() {
         <button type="submit" disabled={submitting}>Subscribe</button>
 
         {/* Display the submitted form data */}
-        {errors && (<p className={styles.error}>Error: {errors.message}</p>)}
+        {/* {errors && (<p className={styles.error}>Error: {errors.message}</p>)} */}
       </form>
   </>
   );
