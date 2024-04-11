@@ -2,6 +2,7 @@ h1 {
     text-align: center;
     margin-block: 1rem;
     padding: 1rem;
+    font-size: clamp(2ch, 3.5vw + 1.5rem, 6rem);
 }
 
 .socialIcons {

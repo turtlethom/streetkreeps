@@ -54,3 +54,11 @@
 .fieldGroup input:focus {
     border: 1px solid hsla(var(--color-red), 0.75);
 }
+
+@media (max-width: 425px) {
+    .fieldGroup input:valid ~ span,
+    .fieldGroup input:focus ~ span {
+        letter-spacing: 0;
+        transform: translateX(5px) translateY(-12px)
+}
+}

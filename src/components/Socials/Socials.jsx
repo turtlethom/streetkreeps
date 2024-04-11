@@ -23,7 +23,7 @@ function Socials() {
     return (
         <div className="bg-black">
             <hr />
-            <h1 className="fs-700">Follow Us On Social Media!</h1>
+            <h1>Follow Us On Social Media!</h1>
             <hr />
             <div className={`flex ${styles.socialIcons}`}>
                 <a href="https://www.facebook.com/StreetKreeps/">

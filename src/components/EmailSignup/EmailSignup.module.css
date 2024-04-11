@@ -29,14 +29,9 @@
 }
 
 .emailFormHeading > p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 3rem);
 }
 
-.termsGroup {
-    grid-column: 1 / span 2; /* Span both columns */
-    text-align: center;
-    padding-inline: 2em;
-}
 
 .emailSignup > .field {
     justify-self: center;
@@ -45,12 +40,13 @@
 }
 
 .termsGroup {
-    margin-inline: auto;
-    gap: 2rem;
+    grid-column: 1 / span 2; /* Span both columns */
+    text-align: center;
+    padding-inline: 2em;
 }
 
 .termsGroup > span {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 2rem);
     margin-inline: 1rem;
 }
 
@@ -79,14 +75,3 @@ button[type="submit"]:hover {
     
 
 } */
-/*
-Email Form Requirements:
--> Title: Signup To Our Newsletter
--> SubHeading: Stay Up To Date On Promotions, Updates, Events, & More!
--> Label #1 (Optional): Full Name (Left)
--> Field #1: Full Name (Right)
--> Label #2 (Required): Email Address 
--> Field #2: Email Address (Right)
--> Option #1: I agree to receive emails from StreetKreeps and accept all terms and conditions.
--> Button Sign Me Up
-*/
