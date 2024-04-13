@@ -8,13 +8,13 @@ export default function ContactBlock() {
             <p className={styles.subtitle}>Feel free to reach out to us via email or phone. Our team will be delighted to assist you.</p>
             <div class={styles.contactInfo}>
                 <strong>Email</strong>
-                <p className={styles.info}>info@streetkreeps.com</p>
+                <p className={styles.info}>streetkreeps@aol.com</p>
 
                 <strong>Phone</strong>
-                <p className={styles.info}>+1 (555) 123-4567</p>
+                <p className={styles.info}>+1 (845)-391-1529</p>
 
                 <strong>Address</strong>
-                <p className={styles.info}>1234 Urban Street, Cityville, State, Country</p>
+                <p className={styles.info}>Newburgh, New York 12550</p>
             </div>
             <div className={styles.lastParagraphs}>
                 <p>Our office hours are Monday to Friday, 9:00 AM to 5:00 PM (EST). We strive to respond to all inquiries within 24 hours during weekdays.</p>

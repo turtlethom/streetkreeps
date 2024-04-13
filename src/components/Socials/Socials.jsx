@@ -7,8 +7,8 @@ function Socials() {
 
     useEffect(() => {
         const handleResize = () => {
-            // If the viewport width is 520px or less, set socialSize to 1em
-            setSocialSize(window.innerWidth <= 520 ? '2em' : '3em');
+            // If the viewport width is 520px or less, set socialSize to 1.5em
+            setSocialSize(window.innerWidth <= 520 ? '1.5em' : '3em');
         };
 
         // Add event listener for window resize

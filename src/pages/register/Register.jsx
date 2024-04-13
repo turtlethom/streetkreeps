@@ -1,3 +1,10 @@
+import React from "react";
+import EmailSignup from "../../components/EmailSignup/EmailSignup";
+
 export default function Register() {
-    return <div><h1>WELCOME TO REGISTER PAGE</h1></div>
+    return (
+        <div>
+            <EmailSignup/>
+        </div>
+    );
 }
