@@ -1,6 +1,5 @@
 .blockContainer {
-    display: grid;
-    place-items: center;
+    margin-inline: auto;
     padding: 3rem;
 }
 
@@ -15,7 +14,7 @@
     
     background: hsl(var(--color-black), 0.5);
     inline-size: min(60rem, 100%);
-    margin-inline: 2rem;
+    margin-inline: auto;
     padding: 3em;
     border: 1px solid hsl(var(--color-white), 0.3);
     box-shadow: 0 0 1em hsla(var(--color-red), 0.5);
@@ -35,13 +34,14 @@
 .descriptionContainer p {
     font-size: clamp(2ch, 1.5vw, 1.5rem);
     padding: 1rem;
-    inline-size: 75%;
+    inline-size: 60%;
     justify-self: center;
 }
 
 .descriptionContainer span {
     position: relative;
     color: hsl(var(--color-red), 1);
+    font-size: clamp(3ch, 1.5vw, 1.8rem);;
     padding-inline-end: .5em;
 }
 

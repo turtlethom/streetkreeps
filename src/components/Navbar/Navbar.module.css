@@ -1,11 +1,10 @@
 .showNav {
-    top: 14.1em;
-    opacity: 1;
+    top: 20%;
+    transition: top 0.3s ease, opacity 0.5s ease;
 }
 
 .hideNav {
     top: -100%;
-    opacity: 0;
     pointer-events: none;
     transition: top 0.3s ease, opacity 0.5s ease;
 }
@@ -40,7 +39,7 @@ div.menuWrapper {
 .navigation {
     display: flex;
     justify-content: space-around;
-    font-size: var(--fs-500);
+    font-size: clamp(3ch, 2.3vw, var(--fs-500));
     margin-inline: 2em;
     padding: 0;
 }
@@ -51,8 +50,8 @@ div.menuWrapper {
 }
 
 .navigation li.cta {
-    padding: .6em 1em; /* Adjust padding for the button */
-    border-radius: 0.3em; /* Add border radius for rounded corners */
+    padding: 0.6em 1em; /* Adjust padding for the button */
+    border-radius: 10px; /* Add border radius for rounded corners */
     background-color: hsl(var(--color-red)); /* Set text color */
     font-weight: bold;
     transition: background-color 0.5s, color 0.3s; /* Add transition effect */
@@ -100,7 +99,7 @@ div.menuWrapper {
 /* Apply hover effect to ::before pseudo-element for both <a> and <Link> elements */
 .navigation li:hover a::before,
 .navigation li:hover Link::before {
-    width: 95%;
+    inline-size: 95%;
 }
 
 @media (max-width: 885px) {
@@ -111,7 +110,7 @@ div.menuWrapper {
         left: 50%; /* align the dropdown to the center horizontally */
         transform: translateX(-50%); /* center the dropdown horizontally */
         z-index: 1;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.4s ease-in-out;
     }
 
     .navigation {
@@ -138,12 +137,10 @@ div.menuWrapper {
         flex-direction: column;
         place-items: center;
         border: 1px solid white;
-        padding-top: 2rem;
+        padding-block: 2rem;
     }
     .navigation li {
         padding-block: 0.5rem;
     }
-    .navigation li:not(:last-child) {
-        margin-bottom: 0.5em; /* Adjust margin-bottom for smaller gap between elements */
-    }
+    
 }
