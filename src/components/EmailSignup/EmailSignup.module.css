@@ -3,12 +3,12 @@
     inline-size: 90%;
     margin-inline: auto;
     margin-block: 3em;
-    grid-template-rows: 2fr repeat(3, 1fr);
+    grid-template-rows: 3fr 0.75fr repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
-    border: 5px solid black;
-    background: var(--color-grad-dark);
-    box-shadow: 0 0 1em hsla(var(--color-red), 0.25);
+    border: 1px solid hsl(var(--color-white), 0.3);
+    background: hsl(var(--color-black), 0.5);
+    box-shadow: 0 0 1em hsla(var(--color-red), 0.5);
 }
 
 .emailFormHeading {
@@ -17,7 +17,7 @@
     grid-column: span 2;
     width: 80%;
     justify-self: center;
-    padding-block: 2rem;
+    padding-block: 1rem;
     text-align: center;
 }
 
@@ -60,9 +60,10 @@ button[type="submit"] {
     
     border: 1px solid black;
     margin-inline: auto;
+    /* padding: 1rem; */
     border-radius: 5px;
     inline-size: 50%;
-    block-size: 50%;
+    block-size: 70%;
     font-size: clamp(var(--fs-200), 2.5vw, var(--fs-600));
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }

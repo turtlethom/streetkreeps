@@ -8,6 +8,7 @@
     background: hsl(var(--color-black), 0.5);
     inline-size: max(20rem, 80%);
     padding: 2rem;
+    box-shadow: 0 0 1em hsla(var(--color-red), 0.5);
 }
 
 .contactContainer > h1 {

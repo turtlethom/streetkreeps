@@ -1,7 +1,6 @@
 .blockContainer {
     display: grid;
     place-items: center;
-    
     padding: 3rem;
 }
 
@@ -15,10 +14,11 @@
     display: grid;
     
     background: hsl(var(--color-black), 0.5);
-    inline-size: min(50rem, 100%);
+    inline-size: min(60rem, 100%);
     margin-inline: 2rem;
     padding: 3em;
-    border: 1px solid white;
+    border: 1px solid hsl(var(--color-white), 0.3);
+    box-shadow: 0 0 1em hsla(var(--color-red), 0.5);
 }
 
 .descriptionContainer > h1 {
@@ -35,7 +35,8 @@
 .descriptionContainer p {
     font-size: clamp(2ch, 1.5vw, 1.5rem);
     padding: 1rem;
-    margin: 1em;
+    inline-size: 75%;
+    justify-self: center;
 }
 
 .descriptionContainer span {
