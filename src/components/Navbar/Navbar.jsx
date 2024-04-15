@@ -7,12 +7,19 @@ import styles from "./Navbar.module.css";
 function NavBar() {
 
     const [ navigationOpen, setNavigationOpen ] = useState(false);
+    const isMobile = window.innerWidth <= 885; // Check if the window width is less than or equal to 885px
 
     const toggleMenu = (event) => {
         event.stopPropagation()
         setNavigationOpen(!navigationOpen);
-        console.log(navigationOpen);
+        // console.log(navigationOpen);
     };
+
+    const closeMenu = () => {
+        if (isMobile) {
+            setNavigationOpen(false);
+        }
+    }
 
     // Update menu button/navigation visibility if screen size changes
     useEffect(() => {
@@ -41,11 +48,11 @@ function NavBar() {
 
                 <div className={`${styles.dropdown} bg-black ${navigationOpen ? styles.showNav : styles.hideNav}`}>
                     <ul className={`flex ${styles.navigation} letter-spacing-2 text-white`} >
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/events">Events</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li className={styles.cta}><Link to="/register">Register</Link></li>
+                        <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+                        <li><Link to="/events" onClick={closeMenu}>Events</Link></li>
+                        <li><Link to="/about" onClick={closeMenu}>About</Link></li>
+                        <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+                        <li className={styles.cta}><Link to="/register" onClick={closeMenu}>Register</Link></li>
                     </ul>
                 </div>
             </nav>
