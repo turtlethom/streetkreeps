@@ -5,6 +5,7 @@ export default function ContactBlock() {
     return (
         <div class={styles.contactContainer}>
             <h1>Contact Us!</h1>
+            <hr style={{inlineSize: '80%'}}/>
             <p className={styles.subtitle}>Feel free to reach out to us via email or phone. Our team will be delighted to assist you.</p>
             <div class={styles.contactInfo}>
                 <strong>Email</strong>

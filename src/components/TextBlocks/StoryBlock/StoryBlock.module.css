@@ -1,26 +1,8 @@
 .blockContainer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    place-items: center;
     
-    line-height: 1.5;
-    padding: 2rem;
-}
-
-.paragraphContainer > h1 {
-    font-size: clamp(5ch, 3.5vw + 1.5rem, 6rem);
-    font-weight: 550;
-    border: 1px solid hsl(var(--color-black), 0.8);
-    background-color: hsl(var(--color-red), 0.5);
-    border-radius: 10px;
-}
-
-.paragraphContainer > h2 {
-    font-size: clamp(2rem, 3vw, 5rem);
-    padding-top: 0.5em;
-}
-
-.paragraphContainer > p {
-    font-size: clamp(2ch, 1.5vw, 1.5rem);
+    padding: 3rem;
 }
 
 .paragraphContainer {
@@ -29,14 +11,45 @@
     align-items: center;
 }
 
-.storyParagraphs {
-    justify-self: center;
-    line-break: strict;
-    text-align: justify;
+.descriptionContainer {
+    display: grid;
     
     background: hsl(var(--color-black), 0.5);
-    inline-size: min(50rem, 90%);
-    min-height: fit-content;
-    padding: 2em;
+    inline-size: min(50rem, 100%);
+    margin-inline: 2rem;
+    padding: 3em;
     border: 1px solid white;
+}
+
+.descriptionContainer > h1 {
+    font-size: clamp(5ch, 3.5vw + 1.5rem, 6rem);
+    font-weight: 550;
+    border: 1px solid hsl(var(--color-black), 0.8);
+    background-color: hsl(var(--color-red), 0.5);
+    border-radius: 10px;
+    align-self: center;
+    
+    margin-block-end: 1rem;
+}
+
+.descriptionContainer p {
+    font-size: clamp(2ch, 1.5vw, 1.5rem);
+    padding: 1rem;
+    margin: 1em;
+}
+
+.descriptionContainer span {
+    position: relative;
+    color: hsl(var(--color-red), 1);
+    padding-inline-end: .5em;
+}
+
+.descriptionContainer span::after {
+    content: "";
+    position: absolute;
+    background-color: hsl(var(--color-red), 1);
+    width: 94%;
+    height: 2px;
+    bottom: 5%;
+    left: 0;
 }
