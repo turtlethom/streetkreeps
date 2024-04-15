@@ -1,5 +1,4 @@
 import React from "react";
-// import './InputField.css';
 import styles from "./InputField.module.css";
 
 const InputField = function({ type, fieldName, id, registerFunc }) {

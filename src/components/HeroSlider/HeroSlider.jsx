@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-// import "./HeroSlider.css";
 import styles from "./HeroSlider.module.css";
 
 function HeroSlider() {

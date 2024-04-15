@@ -2,12 +2,12 @@ import React, { Suspense } from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
-const Home = React.lazy(() => import('./pages/home/Home'));
-const Events = React.lazy(() => import('./pages/events/Events'));
-const Register = React.lazy(() => import('./pages/register/Register'));
-const Contact = React.lazy(() => import('./pages/contact/Contact'));
-const About = React.lazy(() => import('./pages/about/About'));
-const NavBar = React.lazy(() => import('./components/Navbar/Navbar'));
+const Home = React.lazy(() => import('@pages/home/Home'));
+const Events = React.lazy(() => import('@pages/events/Events'));
+const Register = React.lazy(() => import('@pages/register/Register'));
+const Contact = React.lazy(() => import('@pages/contact/Contact'));
+const About = React.lazy(() => import('@pages/about/About'));
+const NavBar = React.lazy(() => import('@components/Navbar/Navbar'));
 
 function App() {
   return (

@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { RiMenuLine } from "@remixicon/react";
-// import "./Navbar.css";
 import styles from "./Navbar.module.css";
 
 function NavBar() {

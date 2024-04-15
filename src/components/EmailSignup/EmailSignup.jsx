@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import InputField from "../InputField/InputField";
-import SUPABASE from "../../config/supabaseClient";
+import InputField from "@components/InputField/InputField";
+import SUPABASE from "@supabase-config";
 import styles from './EmailSignup.module.css';
 
 export default function EmailSignup() {

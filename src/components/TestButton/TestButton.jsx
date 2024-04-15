@@ -1,6 +1,6 @@
 import React from 'react';
 import "./TestButton.module.css";
-import SUPABASE from "../../config/supabaseClient";
+import SUPABASE from "@supabase-config";
 
 /**
  * Used For Testing Database Data from Supabase Connection
