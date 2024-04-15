@@ -12,6 +12,8 @@
 }
 
 .emailFormHeading {
+    display: grid;
+    row-gap: 1rem;
     grid-column: span 2;
     width: 80%;
     justify-self: center;

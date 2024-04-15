@@ -2,7 +2,7 @@
     display: flex;
     position: relative;
     width: minmax(10rem, 80%);
-    margin: 1rem;
+    /* margin-inline: 1rem; */
     text-align: center;
 }
 
