@@ -40,7 +40,8 @@
 .sliderNav button {
     width: 3rem;
     height: 1rem;
-    border: 1px solid black;
+    border: 1px solid hsl(var(--color-black), 0.6);
+    border-radius: 5px / 5px;
     background: hsl(var(--color-white)); /* Initial white background */
     transition: background 1.0s, transform 1.0s; /* Transitions for background and scale */
 }
@@ -79,6 +80,9 @@
 }
 
 @media (max-width: 885px) {
+    .slider {
+        aspect-ratio: 17 / 12;
+    }
     .sliderNav button {
         width: 2rem;
         height: 1rem;

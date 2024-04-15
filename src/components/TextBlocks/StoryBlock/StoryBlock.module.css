@@ -34,7 +34,7 @@
 .descriptionContainer p {
     font-size: clamp(2ch, 1.5vw, 1.5rem);
     padding: 1rem;
-    inline-size: 60%;
+    inline-size: 70%;
     justify-self: center;
 }
 
