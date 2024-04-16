@@ -33,7 +33,7 @@
 
 .descriptionContainer p {
     font-size: clamp(2ch, 1.5vw, 1.5rem);
-    padding: 1rem;
+    padding: 3rem 1rem;
     inline-size: 70%;
     justify-self: center;
 }
@@ -42,7 +42,7 @@
     position: relative;
     color: hsl(var(--color-red), 1);
     font-size: clamp(3ch, 1.5vw, 1.8rem);;
-    padding-inline-end: .5em;
+    padding-inline-end: 0.5em;
 }
 
 .descriptionContainer span::after {
