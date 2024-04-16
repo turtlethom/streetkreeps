@@ -1,0 +1,298 @@
+:root {
+    --color-red: 0, 100%, 50%;
+    --color-blue: 210, 100%, 25%;
+    --color-grey: 0, 0%, 12%;
+    --color-white: 0, 0%, 96%;
+    --color-black: 0, 0%, 0%;
+
+    --color-grad-red: 179deg,  rgba(0,0,0,1) 9.2%, rgba(127,16,16,1) 103.9%;
+    --color-grad-dark: to right, rgb(0, 0, 0), rgb(67, 67, 67);
+  
+    /* font-sizes */
+    --fs-900: 9.375rem;
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-450: 1.5rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+  
+      /* font-families */
+    --ff-sans-bebas: "Bebas Neue", sans-serif;
+    --ff-sans-roboto: "Roboto", sans-serif;
+    --ff-serif-playfair: "Playfair", serif;
+}
+  
+  /* Normalizing/Reseting CSS */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.125rem;
+    color: hsl(var(--color-white));
+    background: linear-gradient(var(--color-grad-dark));
+    line-height: 1.5;   /* Default = 1.4, but too small. Alt: 1.6 */
+    min-height: 100vh; /* Prevent Short Page Issue */
+}
+  
+  /* Reset Margins */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  figure,
+  picture {
+      margin: 0;
+  }
+  
+  /* Emphasis On Headers */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-weight: 400;
+  }
+  
+  /* Make Images Easier To Work With */
+  img,
+  picture {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* Make Form Elements Easy To Work With */
+  input,
+  button,
+  textarea,
+  select {
+      font: inherit; /*Normally, doesn't inherit font, which is a nightmare */
+  }
+
+  a, Link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+    text-decoration-color: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Remove Animations For People Who Have Turned Them Off */
+  /* COPIED */
+  @media (prefers-reduced-motion: reduce) {  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /*Unique Pattern Created By Andy (Lobotomized Owl)
+      - Helps You Control Content Flow
+      - Creates A Border At The Top Of Every Child Element
+          Except The First Child.
+  */
+  
+  .flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+    /* outline: 1px solid red; */
+  }
+  
+  /* Common Utility Class For Screen Reader */
+  /* Allows Screen Reader Content To Display In Same Place ONLY For People With Visual Impairments */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  /* Generic Classes */
+  .flex {
+    display: flex;
+    gap: var(--gap, 1em);
+  }
+  
+  .grid {
+    display: grid;
+    gap: var(--gap, 1em);
+  }
+  
+  .container {
+    margin-inline: auto;
+    padding-inline: auto;
+    width: 90%;
+  }
+
+  /* Spikes Container Styles 
+- Use https://yqnn.github.io/svg-path-editor/ for SVG creation
+- Created the 'triangle.svg' in 'assets' folder
+*/
+.spikes {
+  --spikes-color: hsl(var(--color-black));
+  --spike-width: 50px;
+  --spike-height: 10px;
+
+  position: relative;
+  color: black;
+  background: linear-gradient(
+      to right,
+      #fdc830,
+      #f37335
+  );
+}
+
+.spikes::before,
+.spikes::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: var(--spike-height);
+  background: var(--spikes-color);
+  mask-image: url('assets/triangle.svg');
+  mask-size: var(--spike-width) var(--spike-height);
+}
+
+.spikes::before {
+  top: 0;
+}
+
+.spikes::after {
+  bottom: 0;
+  transform: rotate(.5turn);
+}
+  
+  /* colors */
+  .bg-red { background-color: hsl(var(--color-red));}
+  .bg-grey { background-color: hsl(var(--color-grey));}
+  .bg-white { background-color: hsl(var(--color-white));}
+  .bg-black { background-color: hsl(var(--color-black));}
+  
+  .text-red { color: hsl(var(--color-red));}
+  .text-grey { color: hsl(var(--color-grey));}
+  .text-white { color: hsl(var(--color-white));}
+
+  /*Media Querries*/
+
+  /* Animated Background - https://css-pattern.com/ */
+  .animated-background {
+    --line-thickness: 4px;
+    --size: 60px; /* size */
+    
+    --c:#0004 75%,#999 20%;
+    --p1:from -90deg at calc(50% + var(--line-thickness)) calc(100% - var(--line-thickness));
+    --p2:from -90deg at var(--line-thickness) calc(50% - var(--line-thickness));
+    --e:calc(var(--size)/2);
+    --e-:calc(var(--size)/-2);
+    
+    background:
+      conic-gradient(var(--p1),var(--c)),
+      conic-gradient(var(--p1),var(--c)),
+      conic-gradient(var(--p2),var(--c)),
+      conic-gradient(var(--p2),var(--c)),
+      #111;
+     background-size: var(--size) var(--size);
+     animation: g8 30s infinite;
+  }
+  
+  @keyframes g8{
+    0%,
+    2%   {background-position:0 0       ,var(--e)  var(--e),0 0        ,var(--e) var(--e) }
+    10%,
+    15%  {background-position:0 0       ,var(--e)  var(--e),0 var(--e) ,var(--e) 0        }
+    22.5%,
+    27.5%{background-position:var(--e) 0,0         var(--e),0 var(--e) ,var(--e) 0        }
+    35%,
+    40%  {background-position:var(--e) 0,0         var(--e),0 0        ,var(--e) var(--e-)}
+    47.5%,
+    52.5%{background-position:0        0,var(--e-) var(--e),0 0        ,var(--e) var(--e-)}  
+    60%,
+    65%  {background-position:0        0,var(--e-) var(--e),0 var(--e-),var(--e) 0        } 
+    72.5%,
+    77.5%{background-position:var(--e-)0,0         var(--e),0 var(--e-),var(--e) 0        } 
+    85%,
+    90%  {background-position:var(--e-)0,0         var(--e),0 0        ,var(--e) var(--e) } 
+    98%,
+    100% {background-position:0        0,var(--e)  var(--e),0 0        ,var(--e) var(--e) }
+  }
+  
+  /* typography */
+  
+  .letter-spacing-1 { letter-spacing: 4.75px; } 
+  .letter-spacing-2 { letter-spacing: 2.7px; } 
+  .letter-spacing-3 { letter-spacing: 2.35px; } 
+  
+  .uppercase { text-transform: uppercase; }
+  
+  .fs-900 { font-size: var(--fs-900); }
+  .fs-800 { font-size: var(--fs-800); }
+  .fs-700 { font-size: var(--fs-700); }
+  .fs-600 { font-size: var(--fs-600); }
+  .fs-500 { font-size: var(--fs-500); }
+  .fs-400 { font-size: var(--fs-400); }
+  .fs-300 { font-size: var(--fs-300); }
+  .fs-200 { font-size: var(--fs-200); }
+  
+  .fs-900,
+  .fs-800,
+  .fs-700,
+  .fs-600 {
+      line-height: 1.1;
+  }
+  
+  .ff-bebas { font-family: var(--ff-sans-bebas);}
+  .ff-roboto { font-family: var(--ff-sans-roboto);}
+  .ff-playfair { font-family: var(--ff-sans-playfair);}
+
+  /* --------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 1em;
+  height: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: hsla(var(--color-white), 0.4);
+  border-radius: 100vw;
+  margin-block: .5em;
+  transition: background 1.0s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(hsl(var(--color-red)), hsl(var(--color-black)));
+  border-radius: 100vw;
+  border: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: pink;
+}
+
+@supports (-webkit-scrollbar-thumb: hsl(var(--color-red))) {
+  * {
+    scrollbar-color: hsl(var(--color-red)) hsl(var(--color-black));
+    scrollbar-width: thin;
+  }
+}
