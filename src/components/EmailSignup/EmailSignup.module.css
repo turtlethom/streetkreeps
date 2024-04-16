@@ -21,7 +21,7 @@
     text-align: center;
 }
 
-.emailFormHeading > h2 {
+.emailFormHeading > h1 {
     letter-spacing: 0.4rem;
     line-height: 1.2;
     font-size: clamp(1rem, 7vw + 1rem, 6rem);

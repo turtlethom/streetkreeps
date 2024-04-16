@@ -44,7 +44,7 @@ export default function EmailSignup() {
       >
         <div className={styles.emailFormHeading}>
           <p>Join The StreetKreeps Family</p>
-          <h2>Stay Updated</h2>
+          <h1>Stay Updated</h1>
           <hr style={{inlineSize: '80%'}}/>
           <p>~ Receive The Latest News On Promotions, Updates, Events, & More! ~</p>
         </div>
