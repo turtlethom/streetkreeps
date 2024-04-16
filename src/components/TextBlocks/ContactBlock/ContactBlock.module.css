@@ -21,12 +21,12 @@
 
 .contactContainer > h1,
 .subtitle,
-.lastParagraphs {
+.lastParagraph {
     text-align: center;
 }
 
 .subtitle,
-.lastParagraphs {
+.lastParagraph {
     font-size: clamp(2ch, 2vw, 2rem);
 }
 

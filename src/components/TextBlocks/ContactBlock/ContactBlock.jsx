@@ -17,7 +17,7 @@ export default function ContactBlock() {
                 <strong>Address</strong>
                 <p className={styles.info}>Newburgh, New York 12550</p>
             </div>
-            <div className={styles.lastParagraphs}>
+            <div className={styles.lastParagraph}>
                 <p>Our office hours are Monday to Friday, 9:00 AM to 5:00 PM (EST). We strive to respond to all inquiries within 24 hours during weekdays.</p>
             </div>
         </div>
