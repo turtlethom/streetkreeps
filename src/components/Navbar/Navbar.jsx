@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { RiMenuLine } from "@remixicon/react";
+import { RiMenuLine, RiCloseLargeLine } from "@remixicon/react";
 import styles from "./Navbar.module.css";
 
 function NavBar() {
@@ -38,20 +38,42 @@ function NavBar() {
     return (
         <header>
             <div className={styles.logoWrapper}>
-                <img src="streetkreeps(2).png" alt="" />
+                <img src="streetkreeps-main-logo.png" alt="StreetKreeps Logo" />
             </div>
             <nav>
                 <div className={styles.menuWrapper} onClick={toggleMenu}>
-                    <RiMenuLine id={styles.menuIcon} size={60} color="white"/>
+                    {!navigationOpen ?
+                        <RiMenuLine 
+                            className={styles.menuIcon} 
+                            size={60} 
+                            color="white"
+                        />
+                    :
+                        <RiCloseLargeLine
+                            className={styles.menuIcon} 
+                            size={60} 
+                            color="white"
+                        />
+                    }
                 </div>
 
                 <div className={`${styles.dropdown} bg-black ${navigationOpen ? styles.showNav : styles.hideNav}`}>
                     <ul className={`flex ${styles.navigation} letter-spacing-2 text-white`} >
-                        <li><Link to="/" onClick={closeMenu}>Home</Link></li>
-                        <li><Link to="/events" onClick={closeMenu}>Events</Link></li>
-                        <li><Link to="/about" onClick={closeMenu}>About</Link></li>
-                        <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
-                        <li className={styles.cta}><Link to="/register" onClick={closeMenu}>Register</Link></li>
+                        <li>
+                            <Link to="/" onClick={closeMenu}>Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/events" onClick={closeMenu}>Events</Link>
+                        </li>
+                        <li>
+                            <Link to="/about" onClick={closeMenu}>About</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact" onClick={closeMenu}>Contact</Link>
+                        </li>
+                        <li className={styles.cta}>
+                            <Link to="/register" onClick={closeMenu}>Register</Link>
+                        </li>
                     </ul>
                 </div>
             </nav>
