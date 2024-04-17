@@ -1,8 +1,41 @@
-h1 {
+.headingWrapper {
+    position: relative;
+    inline-size: 100%;
+    padding-inline: auto;
+
+    background-image: url("three-cars.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-block: 5px solid hsl(var(--color-black));
+}
+
+.headingWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(var(--color-black), 0.6); /* Adjust the opacity here */
+}
+
+.headingWrapper h1 {
+    position: relative;
+    z-index: 2;
+
     text-align: center;
-    margin-block: 1rem;
-    padding: 1rem;
+    margin-inline: auto;
+    margin-block: 1.5rem;
+    padding: 0.5rem;
+    inline-size: max(20rem, 60%);
     font-size: clamp(2ch, 3.5vw + 1.5rem, 6rem);
+
+    background-color: hsl(var(--color-black), 0.0);
+    backdrop-filter: blur(2px);
+    border: 1px solid hsl(var(--color-white));
+    border-radius: 10px;
+    pointer-events: none;
 }
 
 .socialIcons {

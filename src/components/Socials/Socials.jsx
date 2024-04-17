@@ -21,10 +21,10 @@ function Socials() {
     }, [])
 
     return (
-        <div className="bg-black">
-            <hr />
-            <h1>Follow Us On Social Media!</h1>
-            <hr />
+        <div className={`${styles.socialsWrapper} bg-black`}>
+            <div className={styles.headingWrapper}>
+                <h1>Follow Us On Social Media!</h1>
+            </div>
             <div className={`flex ${styles.socialIcons}`}>
                 <a href="https://www.facebook.com/StreetKreeps/">
                     <RiFacebookCircleFill 

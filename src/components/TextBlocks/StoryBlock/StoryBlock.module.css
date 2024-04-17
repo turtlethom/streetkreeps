@@ -20,9 +20,11 @@
     box-shadow: 0 0 1em hsla(var(--color-red), 0.5);
 }
 
-.descriptionContainer > h1 {
+.descriptionContainer h1 {
     font-size: clamp(5ch, 3.5vw + 1.5rem, 6rem);
     font-weight: 550;
+    text-align: center;
+    padding: 1rem;
     border: 1px solid hsl(var(--color-black), 0.8);
     background-color: hsl(var(--color-red), 0.5);
     border-radius: 10px;
