@@ -56,7 +56,7 @@ function HeroSlider() {
 
     return (
         <section className={styles.sliderContainer}>
-            <div className={styles.sliderWrapper} ref={sliderRef}>
+            <div ref={sliderRef}>
                 <div className={styles.slider}>
                     {SLIDE_DETAILS.map((slide, index) => (
                         <img
