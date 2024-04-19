@@ -10,22 +10,26 @@ function HeroSlider() {
         {
             id: "slide-1",
             src: "streetkreeps-main.jpg",
-            alt: "First Image Slide"
+            alt: "First Image Slide",
+            text: "Join The Family"
         },
         {
             id: "slide-2",
             src: "mustang-solo.jpg",
-            alt: "Second Image Slide"
+            alt: "Second Image Slide",
+            text: "Welcome"
         },
         {
             id: "slide-3",
             src: "bike-solo.jpg",
-            alt: "Third Image Slide"
+            alt: "Third Image Slide",
+            text: "Learn About Us"
         },
         {
             id: "slide-4",
             src: "two-cars.jpg",
-            alt: "Fourth Image Slide"
+            alt: "Fourth Image Slide",
+            text: "Welcome To StreetKreeps"
         },
     ];
 
@@ -59,13 +63,20 @@ function HeroSlider() {
             <div ref={sliderRef}>
                 <div className={styles.slider}>
                     {SLIDE_DETAILS.map((slide, index) => (
-                        <img
-                            key={slide.id}
-                            id={slide.id}
-                            src={slide.src}
-                            alt={slide.alt}
-                            className={index === currentSlide ? styles.active : ""}
-                        />
+                        <div key={slide.id}>
+                            <img
+                                key={slide.id}
+                                id={slide.id}
+                                src={slide.src}
+                                alt={slide.alt}
+                                className={index === currentSlide ? styles.active : ""}
+                            />
+                            <div className={
+                                `${styles.overlay} ${index === currentSlide ? styles.visible : ""}`
+                            }>
+                                <p>{slide.text}</p>
+                            </div>
+                        </div>
                     ))}
                 </div>
                 <div className={styles.sliderNav}>
