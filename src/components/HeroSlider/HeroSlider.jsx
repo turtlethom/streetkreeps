@@ -11,25 +11,33 @@ function HeroSlider() {
             id: "slide-1",
             src: "streetkreeps-main.jpg",
             alt: "First Image Slide",
-            text: "Join The Family"
+            heading: "Where Passion Meets Pavement",
+            paragraphText: "Welcome to the Brotherhood: StreetKreeps - Where the Road Never Ends!",
+            buttonText: "Register",
         },
         {
             id: "slide-2",
             src: "mustang-solo.jpg",
             alt: "Second Image Slide",
-            text: "Welcome"
+            heading: "Enter The Fast Lane",
+            paragraphText: "Discover the heart-pounding excitement that fuels our community of car enthusiasts - Where Asphalt Meets Attitude!",
+            buttonText: "Contact Us",
         },
         {
             id: "slide-3",
             src: "bike-solo.jpg",
             alt: "Third Image Slide",
-            text: "Learn About Us"
+            heading: "Dive Deeper Into The Culture",
+            paragraphText: "Delve into what StreetKreeps is all about, where every rev of the engine tells a story. ",
+            buttonText: "Learn More",
         },
         {
             id: "slide-4",
             src: "two-cars.jpg",
             alt: "Fourth Image Slide",
-            text: "Welcome To StreetKreeps"
+            heading: "Dare To Dominate",
+            paragraphText: "Turn Heads And Burn Rubber - Where Dreams Drive Reality!",
+            buttonText: "Register",
         },
     ];
 
@@ -74,7 +82,13 @@ function HeroSlider() {
                             <div className={
                                 `${styles.overlay} ${index === currentSlide ? styles.visible : ""}`
                             }>
-                                <p>{slide.text}</p>
+                                <div className={styles.card}>
+                                    <hr />
+                                    <h1>{slide.heading}</h1>
+                                    <hr />
+                                    <p>{slide.paragraphText}</p>
+                                    <button>{slide.buttonText}</button>
+                                </div>
                             </div>
                         </div>
                     ))}
